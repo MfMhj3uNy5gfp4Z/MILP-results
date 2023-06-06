@@ -1,0 +1,6 @@
+
+cd D:\Projects\cepesc_differential\milps\LED
+
+D:
+
+FOR /L %i IN (1,1,48) DO scip -l log_led_%i.txt -q -f led_%i.lp

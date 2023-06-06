@@ -1,0 +1,8 @@
+
+cd D:\Projects\cepesc_differential\milps\Clefia
+
+D:
+
+FOR /L %i IN (1,1,18) DO scip -l log_clefia_linear_%i.txt -q -f clefia_linear_%i.lp
+
+FOR /L %i IN (1,1,18) DO scip -l log_clefia_%i.txt -q -f clefia_%i.lp

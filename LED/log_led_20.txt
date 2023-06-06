@@ -1,0 +1,1140 @@
+SCIP version 8.0.0 [precision: 8 byte] [memory: block] [mode: optimized] [LP solver: SoPlex 6.0.0] [GitHash: a740f0891e]
+Copyright (C) 2002-2021 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+External libraries: 
+  SoPlex 6.0.0         Linear Programming Solver developed at Zuse Institute Berlin (soplex.zib.de) [GitHash: 71a5873d]
+  CppAD 20180000.0     Algorithmic Differentiation of C++ algorithms developed by B. Bell (github.com/coin-or/CppAD)
+  MPIR 3.0.0           Multiple Precision Integers and Rationals Library developed by W. Hart (mpir.org)
+  ZIMPL 3.5.1          Zuse Institute Mathematical Programming Language developed by T. Koch (zimpl.zib.de)
+  AMPL/MP 4e2d45c4     AMPL .nl file reader library (github.com/ampl/mp)
+  PaPILO 2.0.0         parallel presolve for integer and linear optimization (github.com/scipopt/papilo) [GitHash: 76cafc1]
+  Ipopt 3.12.9         Interior Point Optimizer developed by A. Waechter et.al. (github.com/coin-or/Ipopt)
+
+user parameter file <scip.set> not found - using default parameters
+
+read problem <led_20.lp>
+============
+
+WARNING: skipped single sign + without value or variable in objective
+original problem has 416 variables (416 bin, 0 int, 0 impl, 0 cont) and 721 constraints
+
+solve problem
+=============
+
+feasible solution found by trivial heuristic after 0.0 seconds, objective value 3.200000e+02
+presolving:
+(round 1, fast)       16 del vars, 16 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 624 clqs
+   (0.0s) running MILP presolver
+   (0.0s) MILP presolver found nothing
+(round 2, exhaustive) 16 del vars, 16 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 705 upgd conss, 0 impls, 624 clqs
+(round 3, exhaustive) 16 del vars, 36 del conss, 4 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 705 upgd conss, 0 impls, 624 clqs
+   (0.0s) probing: 51/400 (12.8%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (0.0s) probing aborted: 50/50 successive totally useless probings
+   Deactivated symmetry handling methods, since SCIP was built without symmetry detector (SYM=none).
+presolving (4 rounds: 4 fast, 3 medium, 3 exhaustive):
+ 16 deleted vars, 36 deleted constraints, 4 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 624 cliques
+presolved problem has 400 variables (400 bin, 0 int, 0 impl, 0 cont) and 689 constraints
+     76 constraints of type <knapsack>
+    608 constraints of type <setppc>
+      4 constraints of type <and>
+      1 constraints of type <logicor>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 0.00
+transformed 1/1 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+p 0.0s|     1 |     0 |     0 |     - |   locks|   0 | 400 | 690 | 693 |   0 |  0 |   0 |   0 | 0.000000e+00 | 2.430000e+02 |    Inf | unknown
+p 0.0s|     1 |     0 |     0 |     - | vbounds|   0 | 400 | 691 | 693 |   0 |  0 |   1 |   0 | 0.000000e+00 | 1.850000e+02 |    Inf | unknown
+p 0.0s|     1 |     0 |    12 |     - | vbounds|   0 | 400 | 700 | 693 |   0 |  0 |  10 |   0 | 0.000000e+00 | 1.250000e+02 |    Inf | unknown
+  0.0s|     1 |     0 |   200 |     - |  5598k |   0 | 400 | 700 | 693 |   0 |  0 |  10 |   0 | 1.333332e+00 | 1.250000e+02 |9275.01%| unknown
+  0.0s|     1 |     0 |   347 |     - |  5891k |   0 | 400 | 708 | 698 |   5 |  1 |  18 |   0 | 1.133333e+01 | 1.250000e+02 |1002.94%| unknown
+  0.0s|     1 |     0 |   624 |     - |  6252k |   0 | 400 | 709 | 702 |   9 |  2 |  19 |   0 | 2.133333e+01 | 1.250000e+02 | 485.94%| unknown
+  0.0s|     1 |     0 |   711 |     - |  6515k |   0 | 400 | 710 | 706 |  13 |  3 |  20 |   0 | 3.133331e+01 | 1.250000e+02 | 298.94%| unknown
+  0.0s|     1 |     0 |  1147 |     - |  7067k |   0 | 400 | 718 | 721 |  28 |  4 |  28 |   0 | 4.191146e+01 | 1.250000e+02 | 198.25%| unknown
+  0.0s|     1 |     0 |  1394 |     - |  7986k |   0 | 400 | 719 | 729 |  36 |  5 |  29 |   0 | 4.700000e+01 | 1.250000e+02 | 165.96%| unknown
+  0.0s|     1 |     0 |  1671 |     - |  9042k |   0 | 400 | 722 | 740 |  47 |  6 |  32 |   0 | 5.000000e+01 | 1.250000e+02 | 150.00%| unknown
+  1.0s|     1 |     0 |  2029 |     - |    10M |   0 | 400 | 723 | 749 |  56 |  7 |  33 |   0 | 5.000000e+01 | 1.250000e+02 | 150.00%| unknown
+  1.0s|     1 |     0 |  3168 |     - |    14M |   0 | 400 | 727 | 756 |  63 |  8 |  37 |   0 | 5.075582e+01 | 1.250000e+02 | 146.28%| unknown
+  1.0s|     1 |     0 |  4136 |     - |    16M |   0 | 400 | 728 | 762 |  69 |  9 |  38 |   0 | 5.252730e+01 | 1.250000e+02 | 137.97%| unknown
+  1.0s|     1 |     0 |  4931 |     - |    17M |   0 | 400 | 729 | 764 |  71 | 10 |  39 |   0 | 5.341372e+01 | 1.250000e+02 | 134.02%| unknown
+
+SCIP Status        : solving was interrupted [user interrupt]
+Solving Time (sec) : 1.00
+Solving Nodes      : 1
+Primal Bound       : +1.25000000000000e+02 (4 solutions)
+Dual Bound         : +5.34137211460529e+01
+Gap                : 134.02 %
+
+primal solution (original space):
+=================================
+
+objective value:                                  125
+d3                                                  1 	(obj:0)
+d7                                                  1 	(obj:0)
+d8                                                  1 	(obj:0)
+d9                                                  1 	(obj:0)
+d10                                                 1 	(obj:0)
+d11                                                 1 	(obj:0)
+d12                                                 1 	(obj:0)
+d13                                                 1 	(obj:0)
+d14                                                 1 	(obj:0)
+d15                                                 1 	(obj:0)
+d19                                                 1 	(obj:0)
+d23                                                 1 	(obj:0)
+d24                                                 1 	(obj:0)
+d25                                                 1 	(obj:0)
+d26                                                 1 	(obj:0)
+d27                                                 1 	(obj:0)
+d28                                                 1 	(obj:0)
+d29                                                 1 	(obj:0)
+d30                                                 1 	(obj:0)
+d31                                                 1 	(obj:0)
+d35                                                 1 	(obj:0)
+d39                                                 1 	(obj:0)
+d40                                                 1 	(obj:0)
+d41                                                 1 	(obj:0)
+d42                                                 1 	(obj:0)
+d43                                                 1 	(obj:0)
+d44                                                 1 	(obj:0)
+d45                                                 1 	(obj:0)
+d46                                                 1 	(obj:0)
+d47                                                 1 	(obj:0)
+d51                                                 1 	(obj:0)
+d55                                                 1 	(obj:0)
+d56                                                 1 	(obj:0)
+d57                                                 1 	(obj:0)
+d58                                                 1 	(obj:0)
+d59                                                 1 	(obj:0)
+d60                                                 1 	(obj:0)
+d61                                                 1 	(obj:0)
+d62                                                 1 	(obj:0)
+d63                                                 1 	(obj:0)
+d67                                                 1 	(obj:0)
+d71                                                 1 	(obj:0)
+d72                                                 1 	(obj:0)
+d73                                                 1 	(obj:0)
+d74                                                 1 	(obj:0)
+d75                                                 1 	(obj:0)
+d76                                                 1 	(obj:0)
+d77                                                 1 	(obj:0)
+d78                                                 1 	(obj:0)
+d79                                                 1 	(obj:0)
+x1                                                  1 	(obj:1)
+x6                                                  1 	(obj:1)
+x11                                                 1 	(obj:1)
+x12                                                 1 	(obj:1)
+x30                                                 1 	(obj:1)
+x44                                                 1 	(obj:1)
+x45                                                 1 	(obj:1)
+x46                                                 1 	(obj:1)
+x47                                                 1 	(obj:1)
+x48                                                 1 	(obj:1)
+x49                                                 1 	(obj:1)
+x50                                                 1 	(obj:1)
+x51                                                 1 	(obj:1)
+x52                                                 1 	(obj:1)
+x53                                                 1 	(obj:1)
+x54                                                 1 	(obj:1)
+x55                                                 1 	(obj:1)
+x56                                                 1 	(obj:1)
+x57                                                 1 	(obj:1)
+x58                                                 1 	(obj:1)
+x59                                                 1 	(obj:1)
+x60                                                 1 	(obj:1)
+x61                                                 1 	(obj:1)
+x62                                                 1 	(obj:1)
+x63                                                 1 	(obj:1)
+x67                                                 1 	(obj:1)
+x68                                                 1 	(obj:1)
+x73                                                 1 	(obj:1)
+x78                                                 1 	(obj:1)
+x94                                                 1 	(obj:1)
+x108                                                1 	(obj:1)
+x109                                                1 	(obj:1)
+x110                                                1 	(obj:1)
+x111                                                1 	(obj:1)
+x112                                                1 	(obj:1)
+x113                                                1 	(obj:1)
+x114                                                1 	(obj:1)
+x115                                                1 	(obj:1)
+x116                                                1 	(obj:1)
+x117                                                1 	(obj:1)
+x118                                                1 	(obj:1)
+x119                                                1 	(obj:1)
+x120                                                1 	(obj:1)
+x121                                                1 	(obj:1)
+x122                                                1 	(obj:1)
+x123                                                1 	(obj:1)
+x124                                                1 	(obj:1)
+x125                                                1 	(obj:1)
+x126                                                1 	(obj:1)
+x127                                                1 	(obj:1)
+x131                                                1 	(obj:1)
+x132                                                1 	(obj:1)
+x137                                                1 	(obj:1)
+x142                                                1 	(obj:1)
+x158                                                1 	(obj:1)
+x172                                                1 	(obj:1)
+x173                                                1 	(obj:1)
+x174                                                1 	(obj:1)
+x175                                                1 	(obj:1)
+x176                                                1 	(obj:1)
+x177                                                1 	(obj:1)
+x178                                                1 	(obj:1)
+x179                                                1 	(obj:1)
+x180                                                1 	(obj:1)
+x181                                                1 	(obj:1)
+x182                                                1 	(obj:1)
+x183                                                1 	(obj:1)
+x184                                                1 	(obj:1)
+x185                                                1 	(obj:1)
+x186                                                1 	(obj:1)
+x187                                                1 	(obj:1)
+x188                                                1 	(obj:1)
+x189                                                1 	(obj:1)
+x190                                                1 	(obj:1)
+x191                                                1 	(obj:1)
+x195                                                1 	(obj:1)
+x196                                                1 	(obj:1)
+x201                                                1 	(obj:1)
+x206                                                1 	(obj:1)
+x222                                                1 	(obj:1)
+x236                                                1 	(obj:1)
+x237                                                1 	(obj:1)
+x238                                                1 	(obj:1)
+x239                                                1 	(obj:1)
+x240                                                1 	(obj:1)
+x241                                                1 	(obj:1)
+x242                                                1 	(obj:1)
+x243                                                1 	(obj:1)
+x244                                                1 	(obj:1)
+x245                                                1 	(obj:1)
+x246                                                1 	(obj:1)
+x247                                                1 	(obj:1)
+x248                                                1 	(obj:1)
+x249                                                1 	(obj:1)
+x250                                                1 	(obj:1)
+x251                                                1 	(obj:1)
+x252                                                1 	(obj:1)
+x253                                                1 	(obj:1)
+x254                                                1 	(obj:1)
+x255                                                1 	(obj:1)
+x259                                                1 	(obj:1)
+x260                                                1 	(obj:1)
+x265                                                1 	(obj:1)
+x270                                                1 	(obj:1)
+x286                                                1 	(obj:1)
+x300                                                1 	(obj:1)
+x301                                                1 	(obj:1)
+x302                                                1 	(obj:1)
+x303                                                1 	(obj:1)
+x304                                                1 	(obj:1)
+x305                                                1 	(obj:1)
+x306                                                1 	(obj:1)
+x307                                                1 	(obj:1)
+x308                                                1 	(obj:1)
+x309                                                1 	(obj:1)
+x310                                                1 	(obj:1)
+x311                                                1 	(obj:1)
+x312                                                1 	(obj:1)
+x313                                                1 	(obj:1)
+x314                                                1 	(obj:1)
+x315                                                1 	(obj:1)
+x316                                                1 	(obj:1)
+x317                                                1 	(obj:1)
+x318                                                1 	(obj:1)
+x319                                                1 	(obj:1)
+x320                                                1 	(obj:0)
+x321                                                1 	(obj:0)
+x322                                                1 	(obj:0)
+x323                                                1 	(obj:0)
+x324                                                1 	(obj:0)
+x325                                                1 	(obj:0)
+x326                                                1 	(obj:0)
+x327                                                1 	(obj:0)
+x328                                                1 	(obj:0)
+x329                                                1 	(obj:0)
+x330                                                1 	(obj:0)
+x331                                                1 	(obj:0)
+x332                                                1 	(obj:0)
+x333                                                1 	(obj:0)
+x334                                                1 	(obj:0)
+x335                                                1 	(obj:0)
+
+Statistics
+==========
+
+SCIP Status        : solving was interrupted [user interrupt]
+Total Time         :       1.00
+  solving          :       1.00
+  presolving       :       0.00 (included in solving)
+  reading          :       0.00
+  copying          :       0.00 (1 #copies) (minimal 0.00, maximal 0.00, average 0.00)
+Original Problem   :
+  Problem name     : led_20.lp
+  Variables        : 416 (416 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 721 initial, 721 maximal
+  Objective        : minimize, 320 non-zeros (abs.min = 1, abs.max = 1)
+Presolved Problem  :
+  Problem name     : t_led_20.lp
+  Variables        : 400 (400 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 689 initial, 729 maximal
+  Objective        : minimize, 320 non-zeros (abs.min = 1, abs.max = 1)
+  Nonzeros         : 1936 constraint, 1248 clique table
+Presolvers         :   ExecTime  SetupTime  Calls  FixedVars   AggrVars   ChgTypes  ChgBounds   AddHoles    DelCons    AddCons   ChgSides   ChgCoefs
+  boundshift       :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  convertinttobin  :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  domcol           :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  dualagg          :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  dualcomp         :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  dualinfer        :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  dualsparsify     :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  gateextraction   :       0.00       0.00      2          0          0          0          0          0         20          4          0          0
+  implics          :       0.00       0.00      3          0          0          0          0          0          0          0          0          0
+  inttobinary      :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  milp             :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  qpkktref         :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  redvub           :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  sparsify         :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  stuffing         :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  trivial          :       0.00       0.00      4          0          0          0          0          0          0          0          0          0
+  tworowbnd        :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  dualfix          :       0.00       0.00      4          0          0          0          0          0          0          0          0          0
+  genvbounds       :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  probing          :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  pseudoobj        :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  symmetry         :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  vbounds          :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  knapsack         :       0.00       0.00      5          0          0          0          0          0          0          0          0          0
+  setppc           :       0.00       0.00      5          0          0          0          0          0          0          0          0          0
+  and              :       0.00       0.00      2          0          0          0          0          0          0          0          0          0
+  linear           :       0.00       0.00      3          0         16          0          0          0         16          0          0          0
+  logicor          :       0.00       0.00      5          0          0          0          0          0          0          0          0          0
+  benders          :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  components       :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  root node        :          -          -      -          0          -          -          0          -          -          -          -          -
+Constraints        :     Number  MaxNumber  #Separate #Propagate    #EnfoLP    #EnfoRelax  #EnfoPS    #Check   #ResProp    Cutoffs    DomReds       Cuts    Applied      Conss   Children
+  benderslp        :          0          0          0          0          0          0          0         11          0          0          0          0          0          0          0
+  integral         :          0          0          0          0          0          0          0         11          0          0          0          0          0          0          0
+  knapsack         :         76         76         10       1790          0          0          0          6         69         13          0          0          0          0          0
+  setppc           :        608        608         10       1439          0          0          0          5        110          7          0          0          0          0          0
+  and              :          4          4         10       1715          0          0          0          5          0          0          0         11          2          0          0
+  logicor          :          1+        41         10        112          0          0          0          5          1          3          0         21          1          0          0
+  benders          :          0          0          0          0          0          0          0          6          0          0          0          0          0          0          0
+  countsols        :          0          0          0          0          0          0          0          6          0          0          0          0          0          0          0
+  components       :          0          0          0          0          0          0          0          0          0          0          0          0          0          0          0
+Constraint Timings :  TotalTime  SetupTime   Separate  Propagate     EnfoLP     EnfoPS     EnfoRelax   Check    ResProp    SB-Prop
+  benderslp        :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  integral         :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  knapsack         :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  setppc           :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  and              :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  logicor          :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  benders          :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  countsols        :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  components       :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+Propagators        : #Propagate   #ResProp    Cutoffs    DomReds
+  dualfix          :          2          0          0          0
+  genvbounds       :          0          0          0          0
+  nlobbt           :          0          0          0          0
+  obbt             :          0          0          0          0
+  probing          :          0          0          0          0
+  pseudoobj        :         12          0          0          0
+  redcost          :         10          0          0          0
+  rootredcost      :          0          0          0          0
+  symmetry         :          0          0          0          0
+  vbounds          :        920          0          0          0
+Propagator Timings :  TotalTime  SetupTime   Presolve  Propagate    ResProp    SB-Prop
+  dualfix          :       0.00       0.00       0.00       0.00       0.00       0.00
+  genvbounds       :       0.00       0.00       0.00       0.00       0.00       0.00
+  nlobbt           :       0.00       0.00       0.00       0.00       0.00       0.00
+  obbt             :       0.00       0.00       0.00       0.00       0.00       0.00
+  probing          :       0.00       0.00       0.00       0.00       0.00       0.00
+  pseudoobj        :       0.00       0.00       0.00       0.00       0.00       0.00
+  redcost          :       0.00       0.00       0.00       0.00       0.00       0.00
+  rootredcost      :       0.00       0.00       0.00       0.00       0.00       0.00
+  symmetry         :       0.00       0.00       0.00       0.00       0.00       0.00
+  vbounds          :       0.00       0.00       0.00       0.00       0.00       0.00
+Conflict Analysis  :       Time      Calls    Success    DomReds  Conflicts   Literals    Reconvs ReconvLits   Dualrays   Nonzeros   LP Iters   (pool size: [10000,10000])
+  propagation      :       0.00         17         17          -         41       12.0          0        0.0          -          -          -
+  infeasible LP    :       0.00          0          0          -          0        0.0          0        0.0          0        0.0          0
+  bound exceed. LP :       0.00          1          0          -          0        0.0          0        0.0          0        0.0         10
+  strong branching :       0.00          0          0          -          0        0.0          0        0.0          -          -          0
+  pseudo solution  :       0.00          0          0          -          0        0.0          0        0.0          -          -          -
+  applied globally :       0.00          -          -          0         39       10.6          -          -          0          -          -
+  applied locally  :          -          -          -          0          0        0.0          -          -          0          -          -
+Separators         :   ExecTime  SetupTime      Calls    Cutoffs    DomReds       Cuts    Applied      Conss
+  cut pool         :       0.00                    19          -          -        267          -          -    (maximal pool size: 1284)
+  aggregation      :       0.00       0.00          9          0          0          6          0          0
+  > cmir           :          -          -          -          -          -          -          0          -
+  > flowcover      :          -          -          -          -          -          -          0          -
+  > knapsackcover  :          -          -          -          -          -          -          0          -
+  cgmip            :       0.00       0.00          0          0          0          0          0          0
+  clique           :       0.00       0.00          9          0          0          0          0          0
+  closecuts        :       0.00       0.00          0          0          0          0          0          0
+  convexproj       :       0.00       0.00          0          0          0          0          0          0
+  disjunctive      :       0.00       0.00          0          0          0          0          0          0
+  eccuts           :       0.00       0.00          0          0          0          0          0          0
+  gauge            :       0.00       0.00          0          0          0          0          0          0
+  gomory           :       1.00       0.00         10          0          0       1237         55          0
+  > gomorymi       :          -          -          -          -          -          -         50          -
+  > strongcg       :          -          -          -          -          -          -          5          -
+  impliedbounds    :       0.00       0.00         10          0          0          9          0          0
+  interminor       :       0.00       0.00          0          0          0          0          0          0
+  intobj           :       0.00       0.00          0          0          0          0          0          0
+  mcf              :       0.00       0.00          1          0          0          0          0          0
+  minor            :       0.00       0.00          0          0          0          0          0          0
+  mixing           :       0.00       0.00          0          0          0          0          0          0
+  oddcycle         :       0.00       0.00          0          0          0          0          0          0
+  rapidlearning    :       0.00       0.00          1          0          0          0          0          0
+  rlt              :       0.00       0.00         10          0          0          0          0          0
+  zerohalf         :       0.00       0.00          9          0          0         32         13          0
+Cutselectors       :   ExecTime  SetupTime
+  hybrid           :       0.00       0.00
+Pricers            :   ExecTime  SetupTime      Calls       Vars
+  problem variables:       0.00          -          0          0
+Branching Rules    :   ExecTime  SetupTime   BranchLP  BranchExt   BranchPS    Cutoffs    DomReds       Cuts      Conss   Children
+  allfullstrong    :       0.00       0.00          0          0          0          0          0          0          0          0
+  cloud            :       0.00       0.00          0          0          0          0          0          0          0          0
+  distribution     :       0.00       0.00          0          0          0          0          0          0          0          0
+  fullstrong       :       0.00       0.00          0          0          0          0          0          0          0          0
+  inference        :       0.00       0.00          0          0          0          0          0          0          0          0
+  leastinf         :       0.00       0.00          0          0          0          0          0          0          0          0
+  lookahead        :       0.00       0.00          0          0          0          0          0          0          0          0
+  mostinf          :       0.00       0.00          0          0          0          0          0          0          0          0
+  multaggr         :       0.00       0.00          0          0          0          0          0          0          0          0
+  nodereopt        :       0.00       0.00          0          0          0          0          0          0          0          0
+  pscost           :       0.00       0.00          0          0          0          0          0          0          0          0
+  random           :       0.00       0.00          0          0          0          0          0          0          0          0
+  relpscost        :       0.00       0.00          0          0          0          0          0          0          0          0
+  vanillafullstrong:       0.00       0.00          0          0          0          0          0          0          0          0
+Primal Heuristics  :   ExecTime  SetupTime      Calls      Found       Best
+  LP solutions     :       0.00          -          -          0          0
+  relax solutions  :       0.00          -          -          0          0
+  pseudo solutions :       0.00          -          -          0          0
+  strong branching :       0.00          -          -          0          0
+  actconsdiving    :       0.00       0.00          0          0          0
+  adaptivediving   :       0.00       0.00          0          0          0
+  alns             :       0.00       0.00          0          0          0
+  bound            :       0.00       0.00          0          0          0
+  clique           :       0.00       0.00          1          0          0
+  coefdiving       :       0.00       0.00          0          0          0
+  completesol      :       0.00       0.00          0          0          0
+  conflictdiving   :       0.00       0.00          0          0          0
+  crossover        :       0.00       0.00          0          0          0
+  dins             :       0.00       0.00          0          0          0
+  distributiondivin:       0.00       0.00          0          0          0
+  dps              :       0.00       0.00          0          0          0
+  dualval          :       0.00       0.00          0          0          0
+  farkasdiving     :       0.00       0.00          0          0          0
+  feaspump         :       0.00       0.00          0          0          0
+  fixandinfer      :       0.00       0.00          0          0          0
+  fracdiving       :       0.00       0.00          0          0          0
+  gins             :       0.00       0.00          0          0          0
+  guideddiving     :       0.00       0.00          0          0          0
+  indicator        :       0.00       0.00          0          0          0
+  intdiving        :       0.00       0.00          0          0          0
+  intshifting      :       0.00       0.00          0          0          0
+  linesearchdiving :       0.00       0.00          0          0          0
+  localbranching   :       0.00       0.00          0          0          0
+  locks            :       0.00       0.00          1          1          1
+  lpface           :       0.00       0.00          0          0          0
+  mpec             :       0.00       0.00          0          0          0
+  multistart       :       0.00       0.00          0          0          0
+  mutation         :       0.00       0.00          0          0          0
+  nlpdiving        :       0.00       0.00          0          0          0
+  objpscostdiving  :       0.00       0.00          0          0          0
+  octane           :       0.00       0.00          0          0          0
+  ofins            :       0.00       0.00          0          0          0
+  oneopt           :       0.00       0.00          1          0          0
+  padm             :       0.00       0.00          0          0          0
+  proximity        :       0.00       0.00          0          0          0
+  pscostdiving     :       0.00       0.00          0          0          0
+  randrounding     :       0.00       0.00         10          0          0
+  rens             :       0.00       0.00          0          0          0
+  reoptsols        :       0.00       0.00          0          0          0
+  repair           :       0.00       0.00          0          0          0
+  rins             :       0.00       0.00          0          0          0
+  rootsoldiving    :       0.00       0.00          0          0          0
+  rounding         :       0.00       0.00         10          0          0
+  shiftandpropagate:       0.00       0.00          0          0          0
+  shifting         :       0.00       0.00         10          0          0
+  simplerounding   :       0.00       0.00          0          0          0
+  subnlp           :       0.00       0.00          0          0          0
+  trivial          :       0.00       0.00          2          1          1
+  trivialnegation  :       0.00       0.00          0          0          0
+  trustregion      :       0.00       0.00          0          0          0
+  trysol           :       0.00       0.00          0          0          0
+  twoopt           :       0.00       0.00          0          0          0
+  undercover       :       0.00       0.00          1          0          0
+  vbounds          :       0.00       0.00          1          2          2
+  veclendiving     :       0.00       0.00          0          0          0
+  zeroobj          :       0.00       0.00          0          0          0
+  zirounding       :       0.00       0.00          0          0          0
+  other solutions  :          -          -          -          0          -
+Diving (single)    :      Calls      Nodes   LP Iters Backtracks  Conflicts   MinDepth   MaxDepth   AvgDepth  RoundSols  NLeafSols  MinSolDpt  MaxSolDpt  AvgSolDpt
+  actconsdiving    :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  coefdiving       :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  conflictdiving   :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  distributiondivin:          0          -          -          -          -          -          -          -          -          -          -          -          -
+  farkasdiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  fracdiving       :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  guideddiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  linesearchdiving :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  pscostdiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  veclendiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+Diving (adaptive)  :      Calls      Nodes   LP Iters Backtracks  Conflicts   MinDepth   MaxDepth   AvgDepth  RoundSols  NLeafSols  MinSolDpt  MaxSolDpt  AvgSolDpt
+  actconsdiving    :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  coefdiving       :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  conflictdiving   :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  distributiondivin:          0          -          -          -          -          -          -          -          -          -          -          -          -
+  farkasdiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  fracdiving       :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  guideddiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  linesearchdiving :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  pscostdiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  veclendiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+Neighborhoods      :      Calls  SetupTime  SolveTime SolveNodes       Sols       Best       Exp3  EpsGreedy        UCB TgtFixRate  Opt  Inf Node Stal  Sol  Usr Othr Actv
+  rens             :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  rins             :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  mutation         :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  localbranching   :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  crossover        :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  proximity        :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  zeroobjective    :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  dins             :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  trustregion      :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    0
+LP                 :       Time      Calls Iterations  Iter/call   Iter/sec  Time-0-It Calls-0-It    ItLimit
+  primal LP        :       0.00          0          0       0.00          -       0.00          0
+  dual LP          :       0.00         11       4919     447.18          -       0.00          0
+  lex dual LP      :       0.00          0          0       0.00          -
+  barrier LP       :       0.00          0          0       0.00          -       0.00          0
+  resolve instable :       0.00          0          0       0.00          -
+  diving/probing LP:       0.00          1         12      12.00          -
+  strong branching :       0.00          0          0       0.00          -          -          -          0
+    (at root node) :          -          0          0       0.00          -
+  conflict analysis:       0.00          1         10      10.00          -
+B&B Tree           :
+  number of runs   :          1
+  nodes            :          1 (0 internal, 1 leaves)
+  feasible leaves  :          0
+  infeas. leaves   :          0
+  objective leaves :          0
+  nodes (total)    :          1 (0 internal, 1 leaves)
+  nodes left       :          1
+  max depth        :          0
+  max depth (total):          0
+  backtracks       :          0 (0.0%)
+  early backtracks :          0 (0.0%)
+  nodes exc. ref.  :          0 (0.0%)
+  delayed cutoffs  :          0
+  repropagations   :          0 (0 domain reductions, 0 cutoffs)
+  avg switch length:       1.00
+  switching time   :       0.00
+Estim. Tree Size   :         -1
+Estimation Tree    : 1 nodes (0 visited, 0 internal, 0 leaves, 1 open), weight: 0.0000 completed 0.0000
+Estimations        :      estim      value      trend resolution     smooth
+  wbe              :         -1          -          -          -          -
+  tree-profile     :         -1          -          -          -          -
+  gap              :         -1    0.00000                     1           
+  tree-weight      :         -1    0.00000                     1           
+  leaf-frequency   :         -1   -0.50000                     1           
+  ssg              :         -1    1.00000                     1           
+  open-nodes       :         -1    0.00000                     1           
+Root Node          :
+  First LP value   : +1.33333206176758e+00
+  First LP Iters   :        188
+  First LP Time    :       0.00
+  Final Dual Bound : +5.34137211460529e+01
+  Final Root Iters :       4919
+  Root LP Estimate :                     -
+Solution           :
+  Solutions found  :          4 (4 improvements)
+  First Solution   : +3.20000000000000e+02   (in run 1, after 0 nodes, 0.00 seconds, depth 0, found by <trivial>)
+  Gap First Sol.   :   infinite
+  Gap Last Sol.    :   infinite
+  Primal Bound     : +1.25000000000000e+02   (in run 1, after 1 nodes, 0.00 seconds, depth 31, found by <vbounds>)
+  Dual Bound       : +5.34137211460529e+01
+  Gap              :     134.02 %
+Integrals          :      Total       Avg%
+  primal-dual      :      60.00      60.00
+  primal-ref       :          -          - (not evaluated)
+  dual-ref         :          -          - (not evaluated)
+SCIP version 8.0.0 [precision: 8 byte] [memory: block] [mode: optimized] [LP solver: SoPlex 6.0.0] [GitHash: a740f0891e]
+Copyright (C) 2002-2021 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+External libraries: 
+  SoPlex 6.0.0         Linear Programming Solver developed at Zuse Institute Berlin (soplex.zib.de) [GitHash: 71a5873d]
+  CppAD 20180000.0     Algorithmic Differentiation of C++ algorithms developed by B. Bell (github.com/coin-or/CppAD)
+  MPIR 3.0.0           Multiple Precision Integers and Rationals Library developed by W. Hart (mpir.org)
+  ZIMPL 3.5.1          Zuse Institute Mathematical Programming Language developed by T. Koch (zimpl.zib.de)
+  AMPL/MP 4e2d45c4     AMPL .nl file reader library (github.com/ampl/mp)
+  PaPILO 2.0.0         parallel presolve for integer and linear optimization (github.com/scipopt/papilo) [GitHash: 76cafc1]
+  Ipopt 3.12.9         Interior Point Optimizer developed by A. Waechter et.al. (github.com/coin-or/Ipopt)
+
+user parameter file <scip.set> not found - using default parameters
+
+read problem <led_20.lp>
+============
+
+WARNING: skipped single sign + without value or variable in objective
+original problem has 416 variables (416 bin, 0 int, 0 impl, 0 cont) and 721 constraints
+
+solve problem
+=============
+
+feasible solution found by trivial heuristic after 0.0 seconds, objective value 3.200000e+02
+presolving:
+(round 1, fast)       16 del vars, 16 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 624 clqs
+   (0.0s) running MILP presolver
+   (0.0s) MILP presolver found nothing
+(round 2, exhaustive) 16 del vars, 16 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 705 upgd conss, 0 impls, 624 clqs
+(round 3, exhaustive) 16 del vars, 36 del conss, 4 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 705 upgd conss, 0 impls, 624 clqs
+   (0.0s) probing: 51/400 (12.8%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (0.0s) probing aborted: 50/50 successive totally useless probings
+   Deactivated symmetry handling methods, since SCIP was built without symmetry detector (SYM=none).
+presolving (4 rounds: 4 fast, 3 medium, 3 exhaustive):
+ 16 deleted vars, 36 deleted constraints, 4 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 624 cliques
+presolved problem has 400 variables (400 bin, 0 int, 0 impl, 0 cont) and 689 constraints
+     76 constraints of type <knapsack>
+    608 constraints of type <setppc>
+      4 constraints of type <and>
+      1 constraints of type <logicor>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 0.00
+transformed 1/1 original solutions to the transformed problem space
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+p 0.0s|     1 |     0 |     0 |     - |   locks|   0 | 400 | 690 | 693 |   0 |  0 |   0 |   0 | 0.000000e+00 | 2.430000e+02 |    Inf | unknown
+p 0.0s|     1 |     0 |     0 |     - | vbounds|   0 | 400 | 691 | 693 |   0 |  0 |   1 |   0 | 0.000000e+00 | 1.850000e+02 |    Inf | unknown
+p 0.0s|     1 |     0 |    12 |     - | vbounds|   0 | 400 | 700 | 693 |   0 |  0 |  10 |   0 | 0.000000e+00 | 1.250000e+02 |    Inf | unknown
+  0.0s|     1 |     0 |   200 |     - |  5598k |   0 | 400 | 700 | 693 |   0 |  0 |  10 |   0 | 1.333332e+00 | 1.250000e+02 |9275.01%| unknown
+  0.0s|     1 |     0 |   347 |     - |  5891k |   0 | 400 | 708 | 698 |   5 |  1 |  18 |   0 | 1.133333e+01 | 1.250000e+02 |1002.94%| unknown
+  0.0s|     1 |     0 |   624 |     - |  6252k |   0 | 400 | 709 | 702 |   9 |  2 |  19 |   0 | 2.133333e+01 | 1.250000e+02 | 485.94%| unknown
+  0.0s|     1 |     0 |   711 |     - |  6515k |   0 | 400 | 710 | 706 |  13 |  3 |  20 |   0 | 3.133331e+01 | 1.250000e+02 | 298.94%| unknown
+  0.0s|     1 |     0 |  1147 |     - |  7067k |   0 | 400 | 718 | 721 |  28 |  4 |  28 |   0 | 4.191146e+01 | 1.250000e+02 | 198.25%| unknown
+  0.0s|     1 |     0 |  1394 |     - |  7953k |   0 | 400 | 719 | 729 |  36 |  5 |  29 |   0 | 4.700000e+01 | 1.250000e+02 | 165.96%| unknown
+  0.0s|     1 |     0 |  1671 |     - |  9009k |   0 | 400 | 722 | 740 |  47 |  6 |  32 |   0 | 5.000000e+01 | 1.250000e+02 | 150.00%| unknown
+  0.0s|     1 |     0 |  2029 |     - |    10M |   0 | 400 | 723 | 749 |  56 |  7 |  33 |   0 | 5.000000e+01 | 1.250000e+02 | 150.00%| unknown
+  1.0s|     1 |     0 |  3168 |     - |    14M |   0 | 400 | 727 | 756 |  63 |  8 |  37 |   0 | 5.075582e+01 | 1.250000e+02 | 146.28%| unknown
+  1.0s|     1 |     0 |  4136 |     - |    16M |   0 | 400 | 728 | 762 |  69 |  9 |  38 |   0 | 5.252730e+01 | 1.250000e+02 | 137.97%| unknown
+  1.0s|     1 |     0 |  4931 |     - |    18M |   0 | 400 | 729 | 764 |  71 | 10 |  39 |   0 | 5.341372e+01 | 1.250000e+02 | 134.02%| unknown
+  1.0s|     1 |     0 |  5276 |     - |    18M |   0 | 400 | 729 | 769 |  76 | 11 |  39 |   0 | 5.380052e+01 | 1.250000e+02 | 132.34%| unknown
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+  1.0s|     1 |     0 |  5580 |     - |    18M |   0 | 400 | 730 | 775 |  82 | 12 |  40 |   0 | 5.383062e+01 | 1.250000e+02 | 132.21%| unknown
+  1.0s|     1 |     0 |  5891 |     - |    18M |   0 | 400 | 731 | 781 |  88 | 13 |  41 |   0 | 5.384473e+01 | 1.250000e+02 | 132.15%| unknown
+  1.0s|     1 |     0 |  6355 |     - |    18M |   0 | 400 | 735 | 786 |  93 | 14 |  45 |   0 | 5.399915e+01 | 1.250000e+02 | 131.49%| unknown
+  2.0s|     1 |     0 |  6563 |     - |    18M |   0 | 400 | 736 | 791 |  98 | 15 |  46 |   0 | 5.401665e+01 | 1.250000e+02 | 131.41%| unknown
+  2.0s|     1 |     0 |  6849 |     - |    18M |   0 | 400 | 742 | 788 | 101 | 16 |  52 |   0 | 5.409108e+01 | 1.250000e+02 | 131.09%| unknown
+  2.0s|     1 |     0 |  7070 |     - |    18M |   0 | 400 | 743 | 792 | 105 | 17 |  53 |   0 | 5.409583e+01 | 1.250000e+02 | 131.07%| unknown
+  2.0s|     1 |     0 |  7337 |     - |    18M |   0 | 400 | 744 | 796 | 109 | 18 |  54 |   0 | 5.411144e+01 | 1.250000e+02 | 131.00%| unknown
+  2.0s|     1 |     0 |  7507 |     - |    18M |   0 | 400 | 745 | 798 | 111 | 19 |  55 |   0 | 5.411659e+01 | 1.250000e+02 | 130.98%| unknown
+  2.0s|     1 |     0 |  8035 |     - |    19M |   0 | 400 | 751 | 802 | 115 | 20 |  61 |   0 | 5.421055e+01 | 1.250000e+02 | 130.58%| unknown
+  2.0s|     1 |     0 |  8418 |     - |    19M |   0 | 400 | 752 | 804 | 117 | 21 |  62 |   0 | 5.434296e+01 | 1.250000e+02 | 130.02%| unknown
+  2.0s|     1 |     0 |  8805 |     - |    19M |   0 | 400 | 753 | 786 | 118 | 22 |  63 |   0 | 5.449229e+01 | 1.250000e+02 | 129.39%| unknown
+  3.0s|     1 |     2 | 13476 |     - |    19M |   0 | 400 | 770 | 786 | 118 | 24 |  80 |  12 | 5.450637e+01 | 1.250000e+02 | 129.33%| unknown
+
+SCIP Status        : solving was interrupted [user interrupt]
+Solving Time (sec) : 8.00
+Solving Nodes      : 7
+Primal Bound       : +1.25000000000000e+02 (5 solutions)
+Dual Bound         : +5.45063653628605e+01
+Gap                : 129.33 %
+
+primal solution (original space):
+=================================
+
+objective value:                                  125
+d3                                                  1 	(obj:0)
+d7                                                  1 	(obj:0)
+d8                                                  1 	(obj:0)
+d9                                                  1 	(obj:0)
+d10                                                 1 	(obj:0)
+d11                                                 1 	(obj:0)
+d12                                                 1 	(obj:0)
+d13                                                 1 	(obj:0)
+d14                                                 1 	(obj:0)
+d15                                                 1 	(obj:0)
+d19                                                 1 	(obj:0)
+d23                                                 1 	(obj:0)
+d24                                                 1 	(obj:0)
+d25                                                 1 	(obj:0)
+d26                                                 1 	(obj:0)
+d27                                                 1 	(obj:0)
+d28                                                 1 	(obj:0)
+d29                                                 1 	(obj:0)
+d30                                                 1 	(obj:0)
+d31                                                 1 	(obj:0)
+d35                                                 1 	(obj:0)
+d39                                                 1 	(obj:0)
+d40                                                 1 	(obj:0)
+d41                                                 1 	(obj:0)
+d42                                                 1 	(obj:0)
+d43                                                 1 	(obj:0)
+d44                                                 1 	(obj:0)
+d45                                                 1 	(obj:0)
+d46                                                 1 	(obj:0)
+d47                                                 1 	(obj:0)
+d51                                                 1 	(obj:0)
+d55                                                 1 	(obj:0)
+d56                                                 1 	(obj:0)
+d57                                                 1 	(obj:0)
+d58                                                 1 	(obj:0)
+d59                                                 1 	(obj:0)
+d60                                                 1 	(obj:0)
+d61                                                 1 	(obj:0)
+d62                                                 1 	(obj:0)
+d63                                                 1 	(obj:0)
+d67                                                 1 	(obj:0)
+d71                                                 1 	(obj:0)
+d72                                                 1 	(obj:0)
+d73                                                 1 	(obj:0)
+d74                                                 1 	(obj:0)
+d75                                                 1 	(obj:0)
+d76                                                 1 	(obj:0)
+d77                                                 1 	(obj:0)
+d78                                                 1 	(obj:0)
+d79                                                 1 	(obj:0)
+x1                                                  1 	(obj:1)
+x6                                                  1 	(obj:1)
+x11                                                 1 	(obj:1)
+x12                                                 1 	(obj:1)
+x30                                                 1 	(obj:1)
+x44                                                 1 	(obj:1)
+x45                                                 1 	(obj:1)
+x46                                                 1 	(obj:1)
+x47                                                 1 	(obj:1)
+x48                                                 1 	(obj:1)
+x49                                                 1 	(obj:1)
+x50                                                 1 	(obj:1)
+x51                                                 1 	(obj:1)
+x52                                                 1 	(obj:1)
+x53                                                 1 	(obj:1)
+x54                                                 1 	(obj:1)
+x55                                                 1 	(obj:1)
+x56                                                 1 	(obj:1)
+x57                                                 1 	(obj:1)
+x58                                                 1 	(obj:1)
+x59                                                 1 	(obj:1)
+x60                                                 1 	(obj:1)
+x61                                                 1 	(obj:1)
+x62                                                 1 	(obj:1)
+x63                                                 1 	(obj:1)
+x67                                                 1 	(obj:1)
+x68                                                 1 	(obj:1)
+x73                                                 1 	(obj:1)
+x78                                                 1 	(obj:1)
+x94                                                 1 	(obj:1)
+x108                                                1 	(obj:1)
+x109                                                1 	(obj:1)
+x110                                                1 	(obj:1)
+x111                                                1 	(obj:1)
+x112                                                1 	(obj:1)
+x113                                                1 	(obj:1)
+x114                                                1 	(obj:1)
+x115                                                1 	(obj:1)
+x116                                                1 	(obj:1)
+x117                                                1 	(obj:1)
+x118                                                1 	(obj:1)
+x119                                                1 	(obj:1)
+x120                                                1 	(obj:1)
+x121                                                1 	(obj:1)
+x122                                                1 	(obj:1)
+x123                                                1 	(obj:1)
+x124                                                1 	(obj:1)
+x125                                                1 	(obj:1)
+x126                                                1 	(obj:1)
+x127                                                1 	(obj:1)
+x131                                                1 	(obj:1)
+x132                                                1 	(obj:1)
+x137                                                1 	(obj:1)
+x142                                                1 	(obj:1)
+x158                                                1 	(obj:1)
+x172                                                1 	(obj:1)
+x173                                                1 	(obj:1)
+x174                                                1 	(obj:1)
+x175                                                1 	(obj:1)
+x176                                                1 	(obj:1)
+x177                                                1 	(obj:1)
+x178                                                1 	(obj:1)
+x179                                                1 	(obj:1)
+x180                                                1 	(obj:1)
+x181                                                1 	(obj:1)
+x182                                                1 	(obj:1)
+x183                                                1 	(obj:1)
+x184                                                1 	(obj:1)
+x185                                                1 	(obj:1)
+x186                                                1 	(obj:1)
+x187                                                1 	(obj:1)
+x188                                                1 	(obj:1)
+x189                                                1 	(obj:1)
+x190                                                1 	(obj:1)
+x191                                                1 	(obj:1)
+x195                                                1 	(obj:1)
+x196                                                1 	(obj:1)
+x201                                                1 	(obj:1)
+x206                                                1 	(obj:1)
+x222                                                1 	(obj:1)
+x236                                                1 	(obj:1)
+x237                                                1 	(obj:1)
+x238                                                1 	(obj:1)
+x239                                                1 	(obj:1)
+x240                                                1 	(obj:1)
+x241                                                1 	(obj:1)
+x242                                                1 	(obj:1)
+x243                                                1 	(obj:1)
+x244                                                1 	(obj:1)
+x245                                                1 	(obj:1)
+x246                                                1 	(obj:1)
+x247                                                1 	(obj:1)
+x248                                                1 	(obj:1)
+x249                                                1 	(obj:1)
+x250                                                1 	(obj:1)
+x251                                                1 	(obj:1)
+x252                                                1 	(obj:1)
+x253                                                1 	(obj:1)
+x254                                                1 	(obj:1)
+x255                                                1 	(obj:1)
+x259                                                1 	(obj:1)
+x260                                                1 	(obj:1)
+x265                                                1 	(obj:1)
+x270                                                1 	(obj:1)
+x286                                                1 	(obj:1)
+x300                                                1 	(obj:1)
+x301                                                1 	(obj:1)
+x302                                                1 	(obj:1)
+x303                                                1 	(obj:1)
+x304                                                1 	(obj:1)
+x305                                                1 	(obj:1)
+x306                                                1 	(obj:1)
+x307                                                1 	(obj:1)
+x308                                                1 	(obj:1)
+x309                                                1 	(obj:1)
+x310                                                1 	(obj:1)
+x311                                                1 	(obj:1)
+x312                                                1 	(obj:1)
+x313                                                1 	(obj:1)
+x314                                                1 	(obj:1)
+x315                                                1 	(obj:1)
+x316                                                1 	(obj:1)
+x317                                                1 	(obj:1)
+x318                                                1 	(obj:1)
+x319                                                1 	(obj:1)
+x320                                                1 	(obj:0)
+x321                                                1 	(obj:0)
+x322                                                1 	(obj:0)
+x323                                                1 	(obj:0)
+x324                                                1 	(obj:0)
+x325                                                1 	(obj:0)
+x326                                                1 	(obj:0)
+x327                                                1 	(obj:0)
+x328                                                1 	(obj:0)
+x329                                                1 	(obj:0)
+x330                                                1 	(obj:0)
+x331                                                1 	(obj:0)
+x332                                                1 	(obj:0)
+x333                                                1 	(obj:0)
+x334                                                1 	(obj:0)
+x335                                                1 	(obj:0)
+
+Statistics
+==========
+
+SCIP Status        : solving was interrupted [user interrupt]
+Total Time         :       8.00
+  solving          :       8.00
+  presolving       :       0.00 (included in solving)
+  reading          :       0.00
+  copying          :       0.00 (2 #copies) (minimal 0.00, maximal 0.00, average 0.00)
+Original Problem   :
+  Problem name     : led_20.lp
+  Variables        : 416 (416 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 721 initial, 721 maximal
+  Objective        : minimize, 320 non-zeros (abs.min = 1, abs.max = 1)
+Presolved Problem  :
+  Problem name     : t_led_20.lp
+  Variables        : 400 (400 binary, 0 integer, 0 implicit integer, 0 continuous)
+  Constraints      : 689 initial, 770 maximal
+  Objective        : minimize, 320 non-zeros (abs.min = 1, abs.max = 1)
+  Nonzeros         : 1936 constraint, 1248 clique table
+Presolvers         :   ExecTime  SetupTime  Calls  FixedVars   AggrVars   ChgTypes  ChgBounds   AddHoles    DelCons    AddCons   ChgSides   ChgCoefs
+  boundshift       :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  convertinttobin  :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  domcol           :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  dualagg          :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  dualcomp         :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  dualinfer        :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  dualsparsify     :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  gateextraction   :       0.00       0.00      2          0          0          0          0          0         20          4          0          0
+  implics          :       0.00       0.00      3          0          0          0          0          0          0          0          0          0
+  inttobinary      :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  milp             :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  qpkktref         :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  redvub           :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  sparsify         :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  stuffing         :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  trivial          :       0.00       0.00      4          0          0          0          0          0          0          0          0          0
+  tworowbnd        :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  dualfix          :       0.00       0.00      4          0          0          0          0          0          0          0          0          0
+  genvbounds       :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  probing          :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  pseudoobj        :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  symmetry         :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  vbounds          :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  knapsack         :       0.00       0.00      5          0          0          0          0          0          0          0          0          0
+  setppc           :       0.00       0.00      5          0          0          0          0          0          0          0          0          0
+  and              :       0.00       0.00      2          0          0          0          0          0          0          0          0          0
+  linear           :       0.00       0.00      3          0         16          0          0          0         16          0          0          0
+  logicor          :       0.00       0.00      5          0          0          0          0          0          0          0          0          0
+  benders          :       0.00       0.00      0          0          0          0          0          0          0          0          0          0
+  components       :       0.00       0.00      1          0          0          0          0          0          0          0          0          0
+  root node        :          -          -      -          0          -          -          0          -          -          -          -          -
+Constraints        :     Number  MaxNumber  #Separate #Propagate    #EnfoLP    #EnfoRelax  #EnfoPS    #Check   #ResProp    Cutoffs    DomReds       Cuts    Applied      Conss   Children
+  benderslp        :          0          0          0          0          7          0          0         13          0          0          0          0          0          0          0
+  integral         :          0          0          0          0          7          0          0         13          0          0          0          0          0          0         14
+  knapsack         :         76         76         23       3061          0          0          0          8        210         23          4          0          0          0          0
+  setppc           :        608        608         23       2690          0          0          0          6        396         11         29          0          0          0          0
+  and              :          4          4         30       2966          0          0          0          6          0          0          1         12          3          0          0
+  logicor          :          1+        82         23        473          0          0          0          6          7          3          0         21          1          0          0
+  benders          :          0          0          0          0          0          0          0          7          0          0          0          0          0          0          0
+  countsols        :          0          0          0          0          0          0          0          7          0          0          0          0          0          0          0
+  components       :          0          0          0          0          0          0          0          0          0          0          0          0          0          0          0
+Constraint Timings :  TotalTime  SetupTime   Separate  Propagate     EnfoLP     EnfoPS     EnfoRelax   Check    ResProp    SB-Prop
+  benderslp        :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  integral         :       5.00       0.00       0.00       0.00       5.00       0.00       0.00       0.00       0.00       0.00
+  knapsack         :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  setppc           :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  and              :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  logicor          :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  benders          :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  countsols        :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+  components       :       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00       0.00
+Propagators        : #Propagate   #ResProp    Cutoffs    DomReds
+  dualfix          :          2          0          0          0
+  genvbounds       :          0          0          0          0
+  nlobbt           :          0          0          0          0
+  obbt             :          0          0          0          0
+  probing          :          0          0          0          0
+  pseudoobj        :         44          0          0          0
+  redcost          :         24          0          0          0
+  rootredcost      :          1          0          0          0
+  symmetry         :          0          0          0          0
+  vbounds          :       1478          0          0          0
+Propagator Timings :  TotalTime  SetupTime   Presolve  Propagate    ResProp    SB-Prop
+  dualfix          :       0.00       0.00       0.00       0.00       0.00       0.00
+  genvbounds       :       0.00       0.00       0.00       0.00       0.00       0.00
+  nlobbt           :       0.00       0.00       0.00       0.00       0.00       0.00
+  obbt             :       0.00       0.00       0.00       0.00       0.00       0.00
+  probing          :       0.00       0.00       0.00       0.00       0.00       0.00
+  pseudoobj        :       0.00       0.00       0.00       0.00       0.00       0.00
+  redcost          :       0.00       0.00       0.00       0.00       0.00       0.00
+  rootredcost      :       0.00       0.00       0.00       0.00       0.00       0.00
+  symmetry         :       0.00       0.00       0.00       0.00       0.00       0.00
+  vbounds          :       0.00       0.00       0.00       0.00       0.00       0.00
+Conflict Analysis  :       Time      Calls    Success    DomReds  Conflicts   Literals    Reconvs ReconvLits   Dualrays   Nonzeros   LP Iters   (pool size: [10000,10000])
+  propagation      :       0.00         31         31          -         84       12.9          0        0.0          -          -          -
+  infeasible LP    :       0.00          0          0          -          0        0.0          0        0.0          0        0.0          0
+  bound exceed. LP :       0.00          4          1          -         18       40.3          0        0.0          0        0.0         30
+  strong branching :       0.00          0          0          -          0        0.0          0        0.0          -          -          0
+  pseudo solution  :       0.00          0          0          -          0        0.0          0        0.0          -          -          -
+  applied globally :       0.00          -          -          0         80       13.9          -          -          0          -          -
+  applied locally  :          -          -          -          0          0        0.0          -          -          0          -          -
+Separators         :   ExecTime  SetupTime      Calls    Cutoffs    DomReds       Cuts    Applied      Conss
+  cut pool         :       0.00                    42          -          -        364          -          -    (maximal pool size: 1497)
+  aggregation      :       1.00       0.00         23          0          0          8          0          0
+  > cmir           :          -          -          -          -          -          -          0          -
+  > flowcover      :          -          -          -          -          -          -          0          -
+  > knapsackcover  :          -          -          -          -          -          -          0          -
+  cgmip            :       0.00       0.00          0          0          0          0          0          0
+  clique           :       0.00       0.00         23          0          0          0          0          0
+  closecuts        :       0.00       0.00          0          0          0          0          0          0
+  convexproj       :       0.00       0.00          0          0          0          0          0          0
+  disjunctive      :       0.00       0.00          0          0          0          0          0          0
+  eccuts           :       0.00       0.00          0          0          0          0          0          0
+  gauge            :       0.00       0.00          0          0          0          0          0          0
+  gomory           :       1.00       0.00         10          0          0       1402         61          0
+  > gomorymi       :          -          -          -          -          -          -         56          -
+  > strongcg       :          -          -          -          -          -          -          5          -
+  impliedbounds    :       0.00       0.00         23          0          0          9          0          0
+  interminor       :       0.00       0.00          0          0          0          0          0          0
+  intobj           :       0.00       0.00          0          0          0          0          0          0
+  mcf              :       0.00       0.00          1          0          0          0          0          0
+  minor            :       0.00       0.00          0          0          0          0          0          0
+  mixing           :       0.00       0.00          0          0          0          0          0          0
+  oddcycle         :       0.00       0.00          0          0          0          0          0          0
+  rapidlearning    :       0.00       0.00          1          0          0          0          0          0
+  rlt              :       0.00       0.00         10          0          0          0          0          0
+  zerohalf         :       0.00       0.00         20          0          0         78         54          0
+Cutselectors       :   ExecTime  SetupTime
+  hybrid           :       0.00       0.00
+Pricers            :   ExecTime  SetupTime      Calls       Vars
+  problem variables:       0.00          -          0          0
+Branching Rules    :   ExecTime  SetupTime   BranchLP  BranchExt   BranchPS    Cutoffs    DomReds       Cuts      Conss   Children
+  allfullstrong    :       0.00       0.00          0          0          0          0          0          0          0          0
+  cloud            :       0.00       0.00          0          0          0          0          0          0          0          0
+  distribution     :       0.00       0.00          0          0          0          0          0          0          0          0
+  fullstrong       :       0.00       0.00          0          0          0          0          0          0          0          0
+  inference        :       0.00       0.00          0          0          0          0          0          0          0          0
+  leastinf         :       0.00       0.00          0          0          0          0          0          0          0          0
+  lookahead        :       0.00       0.00          0          0          0          0          0          0          0          0
+  mostinf          :       0.00       0.00          0          0          0          0          0          0          0          0
+  multaggr         :       0.00       0.00          0          0          0          0          0          0          0          0
+  nodereopt        :       0.00       0.00          0          0          0          0          0          0          0          0
+  pscost           :       0.00       0.00          0          0          0          0          0          0          0          0
+  random           :       0.00       0.00          0          0          0          0          0          0          0          0
+  relpscost        :       5.00       0.00          7          0          0          0          0          0          0         14
+  vanillafullstrong:       0.00       0.00          0          0          0          0          0          0          0          0
+Primal Heuristics  :   ExecTime  SetupTime      Calls      Found       Best
+  LP solutions     :       0.00          -          -          0          0
+  relax solutions  :       0.00          -          -          0          0
+  pseudo solutions :       0.00          -          -          0          0
+  strong branching :       0.00          -          -          0          0
+  actconsdiving    :       0.00       0.00          0          0          0
+  adaptivediving   :       0.00       0.00          0          0          0
+  alns             :       0.00       0.00          1          0          0
+  bound            :       0.00       0.00          0          0          0
+  clique           :       0.00       0.00          1          0          0
+  coefdiving       :       0.00       0.00          0          0          0
+  completesol      :       0.00       0.00          0          0          0
+  conflictdiving   :       1.00       0.00          1          0          0
+  crossover        :       0.00       0.00          0          0          0
+  dins             :       0.00       0.00          0          0          0
+  distributiondivin:       0.00       0.00          0          0          0
+  dps              :       0.00       0.00          0          0          0
+  dualval          :       0.00       0.00          0          0          0
+  farkasdiving     :       0.00       0.00          0          0          0
+  feaspump         :       0.00       0.00          1          1          0
+  fixandinfer      :       0.00       0.00          0          0          0
+  fracdiving       :       0.00       0.00          0          0          0
+  gins             :       0.00       0.00          0          0          0
+  guideddiving     :       0.00       0.00          0          0          0
+  indicator        :       0.00       0.00          0          0          0
+  intdiving        :       0.00       0.00          0          0          0
+  intshifting      :       0.00       0.00          0          0          0
+  linesearchdiving :       0.00       0.00          0          0          0
+  localbranching   :       0.00       0.00          0          0          0
+  locks            :       0.00       0.00          1          1          1
+  lpface           :       0.00       0.00          0          0          0
+  mpec             :       0.00       0.00          0          0          0
+  multistart       :       0.00       0.00          0          0          0
+  mutation         :       0.00       0.00          0          0          0
+  nlpdiving        :       0.00       0.00          0          0          0
+  objpscostdiving  :       0.00       0.00          0          0          0
+  octane           :       0.00       0.00          0          0          0
+  ofins            :       0.00       0.00          0          0          0
+  oneopt           :       0.00       0.00          1          0          0
+  padm             :       0.00       0.00          0          0          0
+  proximity        :       0.00       0.00          0          0          0
+  pscostdiving     :       0.00       0.00          0          0          0
+  randrounding     :       0.00       0.00         23          0          0
+  rens             :       0.00       0.00          0          0          0
+  reoptsols        :       0.00       0.00          0          0          0
+  repair           :       0.00       0.00          0          0          0
+  rins             :       0.00       0.00          0          0          0
+  rootsoldiving    :       0.00       0.00          0          0          0
+  rounding         :       0.00       0.00         30          0          0
+  shiftandpropagate:       0.00       0.00          0          0          0
+  shifting         :       0.00       0.00         23          0          0
+  simplerounding   :       0.00       0.00          0          0          0
+  subnlp           :       0.00       0.00          0          0          0
+  trivial          :       0.00       0.00          2          1          1
+  trivialnegation  :       0.00       0.00          0          0          0
+  trustregion      :       0.00       0.00          0          0          0
+  trysol           :       0.00       0.00          0          0          0
+  twoopt           :       0.00       0.00          0          0          0
+  undercover       :       0.00       0.00          1          0          0
+  vbounds          :       0.00       0.00          1          2          2
+  veclendiving     :       0.00       0.00          0          0          0
+  zeroobj          :       0.00       0.00          0          0          0
+  zirounding       :       0.00       0.00          6          0          0
+  other solutions  :          -          -          -          0          -
+Diving (single)    :      Calls      Nodes   LP Iters Backtracks  Conflicts   MinDepth   MaxDepth   AvgDepth  RoundSols  NLeafSols  MinSolDpt  MaxSolDpt  AvgSolDpt
+  actconsdiving    :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  coefdiving       :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  conflictdiving   :          1         40       1943          4         36         37         37       37.0          0          -          -          -          -
+  distributiondivin:          0          -          -          -          -          -          -          -          -          -          -          -          -
+  farkasdiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  fracdiving       :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  guideddiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  linesearchdiving :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  pscostdiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  veclendiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+Diving (adaptive)  :      Calls      Nodes   LP Iters Backtracks  Conflicts   MinDepth   MaxDepth   AvgDepth  RoundSols  NLeafSols  MinSolDpt  MaxSolDpt  AvgSolDpt
+  actconsdiving    :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  coefdiving       :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  conflictdiving   :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  distributiondivin:          0          -          -          -          -          -          -          -          -          -          -          -          -
+  farkasdiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  fracdiving       :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  guideddiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  linesearchdiving :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  pscostdiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+  veclendiving     :          0          -          -          -          -          -          -          -          -          -          -          -          -
+Neighborhoods      :      Calls  SetupTime  SolveTime SolveNodes       Sols       Best       Exp3  EpsGreedy        UCB TgtFixRate  Opt  Inf Node Stal  Sol  Usr Othr Actv
+  rens             :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  rins             :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  mutation         :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  localbranching   :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  crossover        :          1       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.700    0    1    0    0    0    0    0    1
+  proximity        :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  zeroobjective    :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  dins             :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    1
+  trustregion      :          0       0.00       0.00          0          0          0    0.00000   -1.00000    1.00000      0.900    0    0    0    0    0    0    0    0
+LP                 :       Time      Calls Iterations  Iter/call   Iter/sec  Time-0-It Calls-0-It    ItLimit
+  primal LP        :       0.00          3          0       0.00          -       0.00          3
+  dual LP          :       0.00         30      10571     352.37          -       0.00          0
+  lex dual LP      :       0.00          0          0       0.00          -
+  barrier LP       :       0.00          0          0       0.00          -       0.00          0
+  resolve instable :       0.00          0          0       0.00          -
+  diving/probing LP:       1.00         19       4685     246.58    4685.00
+  strong branching :       5.00        117      54876     469.03   10975.20          -          -         60
+    (at root node) :          -         12       3686     307.17          -
+  conflict analysis:       0.00          3         30      10.00          -
+B&B Tree           :
+  number of runs   :          1
+  nodes            :          7 (7 internal, 0 leaves)
+  feasible leaves  :          0
+  infeas. leaves   :          0
+  objective leaves :          0
+  nodes (total)    :          7 (7 internal, 0 leaves)
+  nodes left       :          8
+  max depth        :          6
+  max depth (total):          6
+  backtracks       :          0 (0.0%)
+  early backtracks :          0 (0.0%)
+  nodes exc. ref.  :          0 (0.0%)
+  delayed cutoffs  :          0
+  repropagations   :          0 (0 domain reductions, 0 cutoffs)
+  avg switch length:       1.00
+  switching time   :       0.00
+Estim. Tree Size   :         -1
+Estimation Tree    : 15 nodes (7 visited, 7 internal, 0 leaves, 8 open), weight: 0.0000 completed 0.0000
+Estimations        :      estim      value      trend resolution     smooth
+  wbe              :         -1          -          -          -          -
+  tree-profile     :         -1          -          -          -          -
+  gap              :         -1    0.43605                     1           
+  tree-weight      :         -1    0.00000                     1           
+  leaf-frequency   :         -1   -0.07143                     1           
+  ssg              :         -1    1.00000                     1           
+  open-nodes       :         -1    8.00000                     1           
+Root Node          :
+  First LP value   : +1.33333206176758e+00
+  First LP Iters   :        188
+  First LP Time    :       0.00
+  Final Dual Bound : +5.45063653628605e+01
+  Final Root Iters :       8793
+  Root LP Estimate : +5.65857658820073e+01
+Solution           :
+  Solutions found  :          5 (4 improvements)
+  First Solution   : +3.20000000000000e+02   (in run 1, after 0 nodes, 0.00 seconds, depth 0, found by <trivial>)
+  Gap First Sol.   :   infinite
+  Gap Last Sol.    :   infinite
+  Primal Bound     : +1.25000000000000e+02   (in run 1, after 1 nodes, 0.00 seconds, depth 31, found by <vbounds>)
+  Dual Bound       : +5.45063653628605e+01
+  Gap              :     129.33 %
+Integrals          :      Total       Avg%
+  primal-dual      :     455.18      56.90
+  primal-ref       :          -          - (not evaluated)
+  dual-ref         :          -          - (not evaluated)

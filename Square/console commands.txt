@@ -1,0 +1,6 @@
+
+cd D:\Projects\cepesc_differential\milps\SQUARE
+
+D:
+
+FOR /L %i IN (1,1,12) DO scip -l log_square_%i.txt -q -f square_%i.lp
